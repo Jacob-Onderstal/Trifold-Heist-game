@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 16
+  controlID: 39
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 40
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 18
+  controlID: 41
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 250
     height: 610.5
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -415,9 +415,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 9c630000
       m_LastClickedID: 0
-      m_ExpandedIDs: 06f1ffffbcf6ffffccf6ffff1cf7fffff2f7ffff50f9ffff28fbffff
+      m_ExpandedIDs: d2f9ffff26fbffff28fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -810,9 +810,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 3.7331955, y: 2.3876226, z: 2.51606}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 3.7331955, y: 2.3876226, z: 2.51606}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -858,9 +858,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08772786, y: 0.8804663, z: -0.17968005, w: -0.4298829}
+    m_Target: {x: -0.13845296, y: 0.8301155, z: -0.23673587, w: -0.4854861}
     speed: 2
-    m_Value: {x: -0.08772781, y: 0.88046575, z: -0.17967995, w: -0.42988265}
+    m_Value: {x: -0.13845286, y: 0.8301149, z: -0.2367357, w: -0.48548573}
   m_Size:
     m_Target: 1.2247449
     speed: 2
@@ -934,7 +934,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -942,16 +942,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 63
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Scenes
   m_LastFoldersGridSize: 63
   m_LastProjectPath: /Users/jacob.onderstal/Library/CloudStorage/OneDrive-EncounterLutheranCollege/Documents/GitHub/Trifold-Heist-game/Trifold_Heist_Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 54630000
-    m_LastClickedID: 25428
-    m_ExpandedIDs: 000000003e63000000ca9a3b
+    m_SelectedIDs: 8c630000
+    m_LastClickedID: 25484
+    m_ExpandedIDs: 000000006a63000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -979,7 +979,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003e630000
+    m_ExpandedIDs: 000000006a630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
