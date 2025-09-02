@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/DevRoom.unity
+- path: Assets/Scenes/DevRoom (assets).unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
