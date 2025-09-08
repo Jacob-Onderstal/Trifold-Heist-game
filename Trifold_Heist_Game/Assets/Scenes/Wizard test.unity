@@ -142,6 +142,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.515
       objectReference: {fileID: 0}
+    - target: {fileID: 2644545512123861154, guid: b40f13af0fe674dbdb2625ee31baaa85, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5286198890279273238, guid: b40f13af0fe674dbdb2625ee31baaa85, type: 3}
       propertyPath: m_Name
       value: Wizard

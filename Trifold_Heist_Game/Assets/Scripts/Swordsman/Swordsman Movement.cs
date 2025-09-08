@@ -2,16 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Swordsman_Movement : MonoBehaviour
 {
-    public float movementSpeed = 7f;
-    public float fallGravityMultiplier = 2f;
-
-    public float mouseSensitivity = 2f;
-    public float pitchRange = 60f;
-    private float rotateCameraPitch;
-    private Camera firstPersonCam;
+    [Header("Movement")]
 
     private float forwardInputValue;
     private float strafeInputValue;
@@ -20,8 +13,17 @@ public class Swordsman_Movement : MonoBehaviour
 
     private CharacterController characterController;
 
-    //Attack
+    [Header("Camera")]
+    public float movementSpeed = 7f;
+    public float fallGravityMultiplier = 2f;
 
+    public float mouseSensitivity = 2f;
+    public float pitchRange = 60f;
+    private float rotateCameraPitch;
+    private Camera firstPersonCam;
+
+
+    [Header("Attack")]
     public float attackDistance = 3f;
     public float attackDelay = 0.4f;
     public float attackSpeed = 1f;
@@ -33,8 +35,18 @@ public class Swordsman_Movement : MonoBehaviour
     bool readyToAttack = true;
     int attackCount;
 
+    [Header("Animation")]
+
+    private Animator animator;
+    public const string IDLE = "Idle";
+    public const string WALK = "Walk";
+    public const string ATTACK1 = "Attack 1";
+    public const string ATTACK2 = "Attack 2";
+    string currentAnimationState;
+
     void Awake()
     {
+        animator = GetComponentInChildren<Animator>();
         characterController = GetComponent<CharacterController>();
         firstPersonCam = GetComponentInChildren<Camera>();
         Cursor.lockState = CursorLockMode.Locked;
@@ -48,7 +60,7 @@ public class Swordsman_Movement : MonoBehaviour
 
         Movement();
         CameraMovement();
-
+        SetAnimations();
         if (Input.GetButtonDown("Fire1"))
         {
             Attack();
@@ -88,6 +100,17 @@ public class Swordsman_Movement : MonoBehaviour
 
         Invoke(nameof(ResetAttack), attackSpeed);
         Invoke(nameof(AttackRaycast), attackDelay);
+
+        if (attackCount == 0)
+        {
+            ChangeAnimationState(ATTACK1);
+            attackCount++;
+        }
+        else
+        {
+            ChangeAnimationState(ATTACK2);
+            attackCount = 0;
+        }
     }
 
     void ResetAttack()
@@ -113,5 +136,39 @@ public class Swordsman_Movement : MonoBehaviour
     private GameObject Instantiate(Vector3 pos, Quaternion identity)
     {
         throw new NotImplementedException();
+    }
+
+    public void ChangeAnimationState(string newState)
+    {
+        if (currentAnimationState == newState) return;
+        currentAnimationState = newState;
+        animator.CrossFadeInFixedTime(currentAnimationState, 0.2f);
+    }
+
+    void SetAnimations()
+    {
+        if (!attacking)
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                ChangeAnimationState(WALK);
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                ChangeAnimationState(WALK);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                ChangeAnimationState(WALK);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                ChangeAnimationState(WALK);
+            }
+            else
+            {
+                ChangeAnimationState(IDLE);
+            }
+        }
     }
 }
