@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Swordsman test.unity
+- path: Assets/Scenes/Wizard test.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

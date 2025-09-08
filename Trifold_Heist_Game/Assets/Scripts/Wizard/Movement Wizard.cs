@@ -19,8 +19,16 @@ public class Movement_Wizard : MonoBehaviour
 
     private CharacterController characterController;
 
+    private bool boolean;
+
+    private Animator animator;
+    public const string NOMOVE = "NoMove";
+    public const string FIRE = "Fire";
+    string currentAnimationState;
+
     void Awake()
     {
+        animator = GetComponentInChildren<Animator>();
         characterController = GetComponent<CharacterController>();
         firstPersonCam = GetComponentInChildren<Camera>();
         Cursor.lockState = CursorLockMode.Locked;
@@ -32,8 +40,11 @@ public class Movement_Wizard : MonoBehaviour
         forwardInputValue = Input.GetAxisRaw("Vertical");
         strafeInputValue = Input.GetAxisRaw("Horizontal");
 
+        TrueFalse();
         Movement();
         CameraMovement();
+        AttackCheck();
+
     }
 
     void Movement()
@@ -56,4 +67,45 @@ public class Movement_Wizard : MonoBehaviour
         rotateCameraPitch = Mathf.Clamp(rotateCameraPitch, -pitchRange, pitchRange);
         firstPersonCam.transform.localRotation = Quaternion.Euler(rotateCameraPitch, 0, 0);
     }
+
+    void TrueFalse()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            boolean = true;
+        }
+        else
+        {
+            boolean = false;
+        }
+    }
+
+    IEnumerator AttackCheck()
+
+    {
+        StartCoroutine(AttackCheck());
+
+        if (!boolean)
+        {
+            ChangeAnimationState(NOMOVE);
+        }
+        else
+        {
+            ChangeAnimationState(FIRE);
+            yield return new WaitForSeconds(1);
+            ChangeAnimationState(NOMOVE);
+        }
+    }
+
+   
+
+    public void ChangeAnimationState(string newState)
+    {
+        if (currentAnimationState == newState) return;
+        currentAnimationState = newState;
+        animator.CrossFadeInFixedTime(currentAnimationState, 0.2f);
+    }
+
+    
 }
+
