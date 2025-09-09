@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WizardSTATS : CharacterSTAST
+public class WizardSTATS : CharacterSTATS
 {
     /*[SerializeField] private PlayerHUD hud;
 

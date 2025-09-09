@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySTATS : CharacterSTAST
+public class EnemySTATS : CharacterSTATS
 {
     public int maxHealth = 3;
     protected int currentHealth;

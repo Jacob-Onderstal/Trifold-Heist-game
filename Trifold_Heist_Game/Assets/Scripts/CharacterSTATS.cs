@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CharacterSTAST : MonoBehaviour
+public class CharacterSTATS : MonoBehaviour
 {
     [SerializeField] protected int health;
     [SerializeField] protected int MAXhealth;
