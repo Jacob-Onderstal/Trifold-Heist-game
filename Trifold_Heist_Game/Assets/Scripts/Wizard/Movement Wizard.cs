@@ -19,12 +19,8 @@ public class Movement_Wizard : MonoBehaviour
 
     private CharacterController characterController;
 
-    private bool boolean;
-
     private Animator animator;
-    public const string NOMOVE = "NoMove";
     public const string FIRE = "Fire";
-    string currentAnimationState;
 
     void Awake()
     {
@@ -43,7 +39,6 @@ public class Movement_Wizard : MonoBehaviour
         TrueFalse();
         Movement();
         CameraMovement();
-        AttackCheck();
 
     }
 
@@ -68,44 +63,13 @@ public class Movement_Wizard : MonoBehaviour
         firstPersonCam.transform.localRotation = Quaternion.Euler(rotateCameraPitch, 0, 0);
     }
 
-    void TrueFalse()
+    IEnumerator TrueFalse()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKey(KeyCode.Mouse1))
         {
-            boolean = true;
+            animator.Play(FIRE);
+            yield return new WaitForSeconds(1f);
         }
-        else
-        {
-            boolean = false;
-        }
-    }
-
-    IEnumerator AttackCheck()
-
-    {
-        StartCoroutine(AttackCheck());
-
-        if (!boolean)
-        {
-            ChangeAnimationState(NOMOVE);
-        }
-        else
-        {
-            ChangeAnimationState(FIRE);
-            yield return new WaitForSeconds(1);
-            ChangeAnimationState(NOMOVE);
-        }
-    }
-
-   
-
-    public void ChangeAnimationState(string newState)
-    {
-        if (currentAnimationState == newState) return;
-        currentAnimationState = newState;
-        animator.CrossFadeInFixedTime(currentAnimationState, 0.2f);
-    }
-
-    
+    }  
 }
 

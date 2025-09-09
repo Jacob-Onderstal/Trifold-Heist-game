@@ -148,6 +148,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &10670097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10670087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89fdd98c8959a49adb50597af2ef4bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1255950665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -162,15 +174,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2226652881830653551, guid: b40f13af0fe674dbdb2625ee31baaa85, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.15
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 2226652881830653551, guid: b40f13af0fe674dbdb2625ee31baaa85, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.667
+      value: 0.211
       objectReference: {fileID: 0}
     - target: {fileID: 2226652881830653551, guid: b40f13af0fe674dbdb2625ee31baaa85, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.13
+      value: 1.482
+      objectReference: {fileID: 0}
+    - target: {fileID: 3246196716044957498, guid: b40f13af0fe674dbdb2625ee31baaa85, type: 3}
+      propertyPath: ShootCooldown
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5286198890279273238, guid: b40f13af0fe674dbdb2625ee31baaa85, type: 3}
       propertyPath: m_Name
@@ -220,6 +236,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4926660305633473302, guid: b40f13af0fe674dbdb2625ee31baaa85, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 10670097}
     - targetCorrespondingSourceObject: {fileID: 4926660305633473302, guid: b40f13af0fe674dbdb2625ee31baaa85, type: 3}
       insertIndex: -1
       addedObject: {fileID: 10670092}
