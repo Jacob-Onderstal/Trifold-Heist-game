@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Wizard test.unity
+- path: Assets/Scenes/RealGameScenes/Medieval World.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

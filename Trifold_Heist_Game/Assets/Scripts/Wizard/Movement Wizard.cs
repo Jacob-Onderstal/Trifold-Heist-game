@@ -24,7 +24,6 @@ public class Movement_Wizard : MonoBehaviour
 
     void Awake()
     {
-        animator = GetComponentInChildren<Animator>();
         characterController = GetComponent<CharacterController>();
         firstPersonCam = GetComponentInChildren<Camera>();
         Cursor.lockState = CursorLockMode.Locked;
